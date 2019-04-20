@@ -4,6 +4,10 @@ require 'sequel'
 
 module Schema
   Sequel.sqlite(ENV['DB_PATH']) do |db|
-    # Schema is initially empty
+    db.create_table?(:hug_users) do
+      primary_key :id
+      Integer :given, :default=>0
+      Integer :received, :default=>0
+    end
   end
 end
