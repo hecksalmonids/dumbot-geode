@@ -1,0 +1,8 @@
+# Ignore RubyMine workspace files
+.idea
+
+# Ignore database
+db/data.db
+
+# Ignore dev crystals, as they are just for my personal use
+app/dev/*.rb
